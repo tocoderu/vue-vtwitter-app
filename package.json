@@ -1,11 +1,19 @@
 {
-  "name": "tocode-youtube-vtwitter-vue-cli",
-  "version": "0.1.0",
-  "private": true,
+  "name": "tocode-youtube-vtwitter",
+  "version": "1.0.0",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
+  "author": "https://github.com/vedees",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vedees/tocode-youtube-vtwitter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vedees/tocode-youtube-vtwitter/issues"
+  },
+  "license": "MIT",
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^3.0.0"

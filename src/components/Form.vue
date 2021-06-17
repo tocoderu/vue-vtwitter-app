@@ -6,25 +6,26 @@
 </template>
 
 <script>
+import { ref } from 'vue'
+
 export default {
-  data() {
-    return {
-      body: ''
-    }
-  },
-  methods: {
-    onSubmit() {
-      this.$emit('onSubmit', {
+  emits: ['onSubmit'],
+
+  setup(_, { emit }) {
+    const body = ref('')
+
+    const onSubmit = () => {
+      emit('onSubmit', {
         id: Math.round(Math.random() * 30),
         avatar: `https://avatars.dicebear.com/api/male/${Date.now()}.svg`,
-        body: this.body,
+        body: body.value,
         likes: 0,
         date: new Date(Date.now()).toLocaleString()
       })
-
-      // reset
-      this.body = ''
+      body.value = ''
     }
+
+    return { body, onSubmit }
   }
 }
 </script>
